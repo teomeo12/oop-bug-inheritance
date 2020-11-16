@@ -4,13 +4,15 @@ import java.util.ArrayList;
 
 /**
  * Bug demo  - solution to  question P8.12 in Book
- *
- * Shows two different ways of representing the "direction" of Bug
- *      -  boolean variable (Right = true, Left = false) : used in Bug
- *      -  enumeration type called Direction             : used in BugEnum
- *
- *  ArrayList of object REFERENCES is also demonstrated
- *
+ * <p>
+ * <p>
+ * Exercise: Implement and test a "HoppingBug" class as follows:
+ * <p>
+ * HoppingBug inherits all the fields and methods from the Bug class.
+ * Add a new field "hoppingDistance"
+ * Appropriate constructor(s), getter(s) and setter(s)
+ * Override move() to use hoppingDistance as opposed to unit of 1
+ * Appropriate toString()
  */
 public class App
 {
@@ -24,127 +26,47 @@ public class App
 
     public void start()
     {
-
-//        Bug bugsy = new Bug(10);
-//        System.out.println("Position :" + bugsy.getPosition());
-//        bugsy.move();
-//        bugsy.move();
-//        System.out.println("Position :" + bugsy.getPosition());
-//        bugsy.turn();
-//        bugsy.move();
-//        System.out.println("Position :" + bugsy.getPosition());
-//        bugsy.move();
-//        bugsy.move();
-//        System.out.println("Position :" + bugsy.getPosition());
-//
-//// #1      Create ArrayList of Bug objects. Populate it & display their positions
-//
-////
-////
-//        ArrayList<Bug> bugs = new ArrayList<>();
-//
-//        bugs.add(bugsy);
-//        bugs.add(bugsy);    // Add two bugs with same data, i.e. two bugsy objects at same location
-//        bugs.add(new Bug(5));
-//        bugs.add(new Bug(25));
-//
-//
-//// #2      Display Bug positions from ArrayList
-////
-//
-//        System.out.println("\nInitial Bug positions in ArrayList");
-//        for (int i = 0; i < bugs.size(); i++)
-//        {
-//            System.out.println("Position of Bug#" + i + " = " + bugs.get(i).getPosition());
-//        }
-//
-////        Change location of first bug in ArrayList to new location by calling move()
-////
-//        bugs.get(0).move();
-////
-////
-////       Display positions
-//        System.out.println("\nModified AL");
-//        for (int i = 0; i < bugs.size(); i++)
-//        {
-//            System.out.println("Position of Bug#" + i + " = " + bugs.get(i).getPosition());
-//        }
-////
-////
-////      Issue: We added a REFERENCE to the Bug object to the ArrayList.  SAME reference-> same Bug object
-////
-//
-//        System.out.println("\nExamine Memory address refs");
-//        for (int i = 0; i < bugs.size(); i++)
-//        {
-//            System.out.println("Bug#:" + i + " " + bugs.get(i));   // Why does this show us memory address reference?
-//        }
-//
-//        System.out.println("Bugsy address:" + bugsy);
+        Bug bugsy = new Bug(10);
 
 
-        System.out.println("Using BugEnum");
-        BugEnum bugsy = new BugEnum(10);
-        System.out.println("Position :" + bugsy.getPosition());
-        bugsy.move();
-        bugsy.move();
-        System.out.println("Position :" + bugsy.getPosition());
-        bugsy.turn();
-        bugsy.move();
-        System.out.println("Position :" + bugsy.getPosition());
-        bugsy.move();
-        bugsy.move();
-        System.out.println("Position :" + bugsy.getPosition());
+//     Create ArrayList of Bug objects. Populate & display
 
-// #1      Create ArrayList of Bug objects. Populate it & display their positions
-
-//
-//
-        ArrayList<BugEnum> bugs = new ArrayList<>();
+        ArrayList<Bug> bugs = new ArrayList<>();
 
         bugs.add(bugsy);
-        bugs.add(bugsy);    // Add two bugs with same data, i.e. two bugsy objects at same location
-        bugs.add(new BugEnum(5));
-        bugs.add(new BugEnum(25));
+        bugs.add(new Bug(5));
+        bugs.add(new Bug(25));
 
-
-// #2      Display Bug positions from ArrayList
-//
-
-        System.out.println("\nInitial Bug positions in ArrayList");
-        for (int i = 0; i < bugs.size(); i++)
+        System.out.println("\nInitial Bugs in ArrayList");
+        for (Bug bug : bugs)
         {
-            System.out.println("Position of Bug#" + i + " = " + bugs.get(i).getPosition());
+            System.out.println(bug);
         }
 
-//        Change location of first bug in ArrayList to new location by calling move()
-//
-        bugs.get(0).move();
-//
-//
-//       Display positions
-        System.out.println("\nModified AL");
-        for (int i = 0; i < bugs.size(); i++)
-        {
-            System.out.println("Position of Bug#" + i + " = " + bugs.get(i).getPosition());
-        }
-//
-//
-//      ISSUE: We added a REFERENCE to the Bug object to the ArrayList.  SAME reference-> same Bug object
-//
 
-        System.out.println("\nExamine Memory address refs");
-        for (int i = 0; i < bugs.size(); i++)
-        {
-            System.out.println("Bug#:" + i + " " + bugs.get(i));   // Why does this show us memory address reference?
-        }
+        //TODO #1 Create a single HoppingBug object. Test and correct your HoppingBug class
 
-        System.out.println("Bugsy address:" + bugsy);
+
+        //TODO #2 Create and populate an ArrayList of both Bug and HoppingBug objects
+
+
+
+
+        //TODO #3 Display details of all bugs in arrayList (use toString())
+
+
+
+        //TODO #4 Call move() for all bugs in arrayList. Display their new details (use toString())
+
+
+
+        //TODO #5  Display id and position for all hoppingBugs in arrayList.
+
 
     }
 
 
-//    public static void displayBugs(ArrayList<BugEnum> bugs)
+//    public static void displayBugs(ArrayList<Bug> bugs)
 //    {
 //        for (int i = 0; i < bugs.size(); i++)
 //        {
