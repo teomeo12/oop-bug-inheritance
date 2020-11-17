@@ -51,7 +51,6 @@ public class App
 
 
 
-
         //TODO #3 Display details of all bugs in arrayList (use toString())
 
 
@@ -60,8 +59,15 @@ public class App
 
 
 
-        //TODO #5  Display id and position for all hoppingBugs in arrayList.
+        //TODO #5  Display id and hoppingDistance for all hoppingBugs in arrayList.
 
+
+
+        //TODO #6 Implement and test .equals() for Bug objects
+
+
+
+        //TODO #7 Implement and test .equals() for HoppingBug objects
 
     }
 

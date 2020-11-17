@@ -14,7 +14,7 @@ public class AppTest
     @Test
     public void testConstructor()
     {
-        BugEnum b = new BugEnum(5);
+        Bug b = new Bug(5);
         int expected = 5;
         int actual = b.getPosition();
         assertEquals(expected, actual);
@@ -23,7 +23,7 @@ public class AppTest
     @Test
     public void testConstructor2()
     {
-        BugEnum b = new BugEnum(5);
+        Bug b = new Bug(5);
         Direction expected = Direction.RIGHT;
         Direction actual = b.getDirection();
         assertEquals(expected, actual);
@@ -32,7 +32,7 @@ public class AppTest
     @Test
     public void testMove()
     {
-        BugEnum b = new BugEnum(5);
+        Bug b = new Bug(5);
         b.move();
         int expected = 6;
         int actual = b.getPosition();
@@ -42,7 +42,7 @@ public class AppTest
     @Test
     public void testTurn()
     {
-        BugEnum b = new BugEnum(5);
+        Bug b = new Bug(5);
         b.turn();
         Direction expected = Direction.LEFT;
         Direction actual = b.getDirection();
