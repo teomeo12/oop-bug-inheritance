@@ -7,6 +7,7 @@ package dkit.sd2;
 public class Bug
 {
 
+
     private String id;
     private int position;
     private Direction direction;
@@ -19,7 +20,9 @@ public class Bug
         this.position = initialPosition;
         this.direction = Direction.RIGHT;
     }
-
+    public void setPosition(int position) {
+        this.position = position;
+    }
     public int getPosition()
     {
         return this.position;
