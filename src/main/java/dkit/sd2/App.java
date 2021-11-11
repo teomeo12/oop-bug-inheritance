@@ -29,95 +29,89 @@ public class App
     {
         Bug bugsy = new Bug(10);
 
-
 //     Create ArrayList of Bug objects. Populate & display
-
         ArrayList<Bug> bugs = new ArrayList<>();
 
         bugs.add(bugsy);
         bugs.add(new Bug(5));
         bugs.add(new Bug(25));
 
-        System.out.println("\nInitial Bugs in ArrayList");
+        System.out.println("\n**************Initial Bugs in ArrayList*************");
         for (Bug bug : bugs)
         {
             System.out.println(bug);
         }
 
-
         //TODO #1 Create a single HoppingBug object. Test and correct your HoppingBug class
+        System.out.println("\n*********TODO 1*****Create a single HoppingBug object*************");
         HoppingBug h1 = new HoppingBug(11,12);
         System.out.println(h1);
         h1.setHoppingDistance(7);
         System.out.println(h1);
         //TODO #2 Create and populate an ArrayList of both Bug and HoppingBug objects
+        System.out.println("\n*********TODO 2*****Bug and HoppingBug objects*************");
         ArrayList<Bug> allBugs = new ArrayList<>();
 
         Bug bug1 = new Bug(2);
-        Bug bug2 = new Bug(2);
+        Bug bug2 = new Bug(4);
 
         HoppingBug hopBug1 = new HoppingBug(2,12);
         HoppingBug hopBug2 = new HoppingBug(13,4);
 
         allBugs.add(h1);
-        System.out.println("comparing two objects");
-        System.out.println(hopBug1.equals(hopBug2));
-        System.out.println(hopBug1 == (hopBug2));
-
-
+        allBugs.add(bug1);
+        allBugs.add(bug2);
+        allBugs.add(hopBug1);
+        allBugs.add(hopBug2);
 
         //TODO #3 Display details of all bugs in arrayList (use toString())
+        System.out.println("\n***********TODO 3++++Display details of all bugs***************");
         System.out.println();
         System.out.println("All bugs: ");
-        for(Bug b: allBugs){
-            System.out.println(b.toString());
+        for(Bug bug: allBugs){
+            System.out.println(bug.toString());
         }
-
-
         //TODO #4 Call move() for all bugs in arrayList. Display their new details (use toString())
-        System.out.println("After moving all by 5");
-        for(Bug b: allBugs){
-            b.move();
+        System.out.println("\n***********TODO 4++++Call move() for all bugs in arrayList***************");
+        for(Bug bug: allBugs){
+            bug.move();
         }
 
         System.out.println("All bugs After move: ");
-        for(Bug b: allBugs){
-            System.out.println(b.toString());
+        for(Bug bug: allBugs){
+            System.out.println(bug.toString());
         }
 
         //TODO #5  Display id and hoppingDistance for all hoppingBugs in arrayList.
+        System.out.println("\n***********TODO 5***Display id and hoppingDistance***************");
         System.out.println("id & Hopdist ");
-        for(Bug b: allBugs){
-            if(b instanceof HoppingBug){
-                System.out.println(b.getId()+" & "+((HoppingBug) b).getHoppingDistance());
+        for(Bug bug: allBugs){
+            if(bug instanceof HoppingBug){
+                System.out.println(bug.getId()+" & "+((HoppingBug) bug).getHoppingDistance());
             }
             else{
-                System.out.println(b.getId()+" & "+1);
+                System.out.println(bug.getId()+" & "+1);
             }
         }
 
-
         //TODO #6 Implement and test .equals() for Bug objects
+        System.out.println("\n***********TODO 6++++comparing two objects***************");
+        System.out.println("Comparing bug1: "+bug1+" and bug2: " +bug2);
         System.out.println(bug1.equals(bug2));
+        System.out.println(bug1 == bug2);
+
+
 
 
         //TODO #7 Implement and test .equals() for HoppingBug objects
-        for(Bug b: allBugs){
-            if(b instanceof HoppingBug){
-                System.out.println(hopBug1.equals(hopBug2));
-            }
-        }
+        System.out.println("\n***********TODO 7+++Implement and test .equals() for HoppingBug***************");
+        System.out.println("Comparing hopBug1: "+hopBug1+" and hopBug2: " +hopBug2);
+        System.out.println(hopBug1.equals(hopBug2));
+        System.out.println(hopBug1 == hopBug2);
+
 
     }
 
-
-//    public static void displayBugs(ArrayList<Bug> bugs)
-//    {
-//        for (int i = 0; i < bugs.size(); i++)
-//        {
-//            System.out.println("Position of Bug#" + i + " = " + bugs.get(i).getPosition());
-//        }
-//    }
 
 }
 

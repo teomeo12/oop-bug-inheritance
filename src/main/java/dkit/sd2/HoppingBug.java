@@ -11,26 +11,27 @@ public class HoppingBug extends Bug{
     }
 
     public int getHoppingDistance() {
-        return super.getPosition() + hoppingDistance;
+       // return super.getPosition() + hoppingDistance;
+        return this.hoppingDistance;
     }
 
     public void setHoppingDistance(int hoppingDistance) {
         this.hoppingDistance = hoppingDistance;
     }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        if (!super.equals(o)) return false;
-//        HoppingBug that = (HoppingBug) o;
-//        return hoppingDistance == that.hoppingDistance;
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(super.hashCode(), hoppingDistance);
-//    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        HoppingBug that = (HoppingBug) o;
+        return hoppingDistance == that.hoppingDistance;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), hoppingDistance);
+    }
 
     @Override
     public void move()
@@ -52,18 +53,7 @@ public String toString() {
             "hoppingDistance=" + hoppingDistance +
             '}';
 }
-//    int hoppingDistance;
-//
-//    public HopingBug(int position,int hoppingDistance){
-//        super(position);
-//        this.hoppingDistance = hoppingDistance;
-//    }
-//    public int getHoppingDistance(){
-//        return this.hoppingDistance;
-//    }
-//    public void setHoppingDistance(int hopdist){
-//        this.hoppingDistance = hopdist;
-//    }
+
 //
 //    @Override
 //    public boolean equals(Object o) {
