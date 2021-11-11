@@ -109,11 +109,20 @@ public class App
         System.out.println(hopBug1.equals(hopBug2));
         System.out.println(hopBug1 == hopBug2);
 
+        System.out.println(hopBug1.equals(hopBug2));
+        System.out.println(hopBug1 == hopBug2);
+
 
     }
 
 
 }
+
+//    git add .
+//    git -commit -m "updateclasses with statement"
+//    git push -u origin master
+
+
 
 
 
