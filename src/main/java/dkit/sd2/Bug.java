@@ -1,5 +1,7 @@
 package dkit.sd2;
 
+import java.util.Objects;
+
 /**
  * Second version of Bug - uses enum Direction as datatype of direction instance variable.
  * Uses static Counter to give each new Bug an id
@@ -67,6 +69,19 @@ public class Bug
         return this.direction;
     }
 
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Bug bug = (Bug) o;
+//        return position == bug.position && id.equals(bug.id) && direction == bug.direction;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(id, position, direction);
+//    }
+
     @Override
     public String toString()
     {
@@ -76,5 +91,7 @@ public class Bug
                 ", direction=" + direction +
                 '}';
     }
+
+
 }
 

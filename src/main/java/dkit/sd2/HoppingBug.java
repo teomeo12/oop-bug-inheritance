@@ -1,5 +1,7 @@
 package dkit.sd2;
 
+import java.util.Objects;
+
 public class HoppingBug extends Bug{
         private int hoppingDistance ;
 
@@ -16,7 +18,21 @@ public class HoppingBug extends Bug{
         this.hoppingDistance = hoppingDistance;
     }
 
-        @Override
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        if (!super.equals(o)) return false;
+//        HoppingBug that = (HoppingBug) o;
+//        return hoppingDistance == that.hoppingDistance;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(super.hashCode(), hoppingDistance);
+//    }
+
+    @Override
     public void move()
     {
         if (getDirection() == Direction.RIGHT)
@@ -36,6 +52,49 @@ public String toString() {
             "hoppingDistance=" + hoppingDistance +
             '}';
 }
+//    int hoppingDistance;
+//
+//    public HopingBug(int position,int hoppingDistance){
+//        super(position);
+//        this.hoppingDistance = hoppingDistance;
+//    }
+//    public int getHoppingDistance(){
+//        return this.hoppingDistance;
+//    }
+//    public void setHoppingDistance(int hopdist){
+//        this.hoppingDistance = hopdist;
+//    }
+//
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (!(o instanceof HopingBug)) return false;
+//        HopingBug hopingBug = (HopingBug) o;
+//        return getHoppingDistance() == hopingBug.getHoppingDistance();
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(getHoppingDistance());
+//    }
+//
+//    @Override
+//    public void move(){
+//        if (getDirection() == Direction.RIGHT) //super.getDirection -- dont need super always!
+//        {
+//            setPosition(getPosition()+hoppingDistance);
+//
+//        }
+//        else
+//        {
+//            setPosition(getPosition()-hoppingDistance);
+//        }
+//    }
+//
+//    @Override
+//    public String toString(){
+//        return super.toString()+" { hoppingDistance : "+this.hoppingDistance +" }";
+//    }
 
 
 }
