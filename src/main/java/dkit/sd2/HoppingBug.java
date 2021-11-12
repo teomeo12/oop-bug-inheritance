@@ -21,12 +21,16 @@ public class HoppingBug extends Bug{
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        HoppingBug that = (HoppingBug) o;
-        return hoppingDistance == that.hoppingDistance;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        if (!super.equals(o))
+            return false;
+        HoppingBug hoppingBug = (HoppingBug) o;
+        return super.getId() == hoppingBug.getId()&& super.getPosition() == hoppingBug.getPosition() && super.getDirection() == hoppingBug.getDirection() && this.hoppingDistance == hoppingBug.hoppingDistance;
     }
+   // super.getId() == hoppingBug.getId()&& super.getPosition() == hoppingBug.getPosition() && super.getDirection() == hoppingBug.getDirection() &&
 
     @Override
     public int hashCode() {

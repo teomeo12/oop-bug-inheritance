@@ -17,7 +17,7 @@ public class Bug
 
     public Bug(int initialPosition)
     {
-        counter++;
+       // counter++;
         this.id = "B" + counter;
         this.position = initialPosition;
         this.direction = Direction.RIGHT;
@@ -69,18 +69,22 @@ public class Bug
         return this.direction;
     }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        Bug bug = (Bug) o;
-//        return position == bug.position && id.equals(bug.id) && direction == bug.direction;
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(id, position, direction);
-//    }
+    @Override
+    public boolean equals(Object o) {
+//        if (this == o)
+//            return true;
+//        if (o == null || getClass() != o.getClass())
+//            return false;
+        Bug bug = (Bug) o; //this is called downcasting converting Object o to Bug object
+        return this.position == bug.position && this.id.equals(bug.id) && this.direction == bug.direction;
+    }
+
+    @Override
+    public int hashCode() {
+        //return Objects.hash(id, position, direction);
+        return  this.position && this.direction;
+    }
+
 
     @Override
     public String toString()

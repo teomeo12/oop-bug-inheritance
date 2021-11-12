@@ -54,15 +54,19 @@ public class App
 
         Bug bug1 = new Bug(2);
         Bug bug2 = new Bug(4);
+        Bug bug3 = new Bug(4);
 
         HoppingBug hopBug1 = new HoppingBug(2,12);
-        HoppingBug hopBug2 = new HoppingBug(13,4);
+        HoppingBug hopBug2 = new HoppingBug(2,13);
+        HoppingBug hopBug3 = new HoppingBug(2,13);
 
         allBugs.add(h1);
         allBugs.add(bug1);
         allBugs.add(bug2);
+        allBugs.add(bug3);
         allBugs.add(hopBug1);
         allBugs.add(hopBug2);
+        allBugs.add(hopBug3);
 
         //TODO #3 Display details of all bugs in arrayList (use toString())
         System.out.println("\n***********TODO 3++++Display details of all bugs***************");
@@ -70,6 +74,7 @@ public class App
         System.out.println("All bugs: ");
         for(Bug bug: allBugs){
             System.out.println(bug.toString());
+            System.out.println(bug.hashCode());
         }
         //TODO #4 Call move() for all bugs in arrayList. Display their new details (use toString())
         System.out.println("\n***********TODO 4++++Call move() for all bugs in arrayList***************");
@@ -96,26 +101,23 @@ public class App
 
         //TODO #6 Implement and test .equals() for Bug objects
         System.out.println("\n***********TODO 6++++comparing two objects***************");
-        System.out.println("Comparing bug1: "+bug1+" and bug2: " +bug2);
+        System.out.println("Comparing bug1: "+bug1+"\n      and bug2: " +bug2);
+        System.out.println("**************Result*******************");
         System.out.println(bug1.equals(bug2));
-        System.out.println(bug1 == bug2);
-
-
-
+        System.out.println("\nComparing bug2: "+bug2+"\n      and bug3: " +bug3);
+        System.out.println("**************Result*******************");
+        System.out.println(bug2.equals(bug3));
 
         //TODO #7 Implement and test .equals() for HoppingBug objects
         System.out.println("\n***********TODO 7+++Implement and test .equals() for HoppingBug***************");
-        System.out.println("Comparing hopBug1: "+hopBug1+" and hopBug2: " +hopBug2);
+        System.out.println("Comparing hopBug1: "+hopBug1+"\n      and hopBug2: " +hopBug2);
+        System.out.println("**************Result*******************");
         System.out.println(hopBug1.equals(hopBug2));
-        System.out.println(hopBug1 == hopBug2);
-
-        System.out.println(hopBug1.equals(hopBug2));
-        System.out.println(hopBug1 == hopBug2);
-
+        System.out.println("\nComparing hopBug2: "+hopBug2+"\n     and hopBug3: " +hopBug3);
+        System.out.println("**************Result*******************");
+        System.out.println(hopBug1.equals(hopBug3));
 
     }
-
-
 }
 
 //    git add .
