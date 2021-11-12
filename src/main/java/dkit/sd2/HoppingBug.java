@@ -28,9 +28,8 @@ public class HoppingBug extends Bug{
         if (!super.equals(o))
             return false;
         HoppingBug hoppingBug = (HoppingBug) o;
-        return super.getId() == hoppingBug.getId()&& super.getPosition() == hoppingBug.getPosition() && super.getDirection() == hoppingBug.getDirection() && this.hoppingDistance == hoppingBug.hoppingDistance;
+        return  this.hoppingDistance == hoppingBug.hoppingDistance;
     }
-   // super.getId() == hoppingBug.getId()&& super.getPosition() == hoppingBug.getPosition() && super.getDirection() == hoppingBug.getDirection() &&
 
     @Override
     public int hashCode() {

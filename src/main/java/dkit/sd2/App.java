@@ -115,7 +115,7 @@ public class App
         System.out.println(hopBug1.equals(hopBug2));
         System.out.println("\nComparing hopBug2: "+hopBug2+"\n     and hopBug3: " +hopBug3);
         System.out.println("**************Result*******************");
-        System.out.println(hopBug1.equals(hopBug3));
+        System.out.println(hopBug2.equals(hopBug3));
 
     }
 }
